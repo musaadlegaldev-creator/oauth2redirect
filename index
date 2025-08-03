@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    // ✅ استخراج الكود من الرابط
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code');
+    if (code) {
+      // ✅ إعادة التوجيه إلى تطبيق B4A
+      const redirectUrl = 'b4aexample://oauth2redirect?code=' + code;
+      window.location.href = redirectUrl;
+    } else {
+      document.write("❌ فشل تسجيل الدخول: لا يوجد code");
+    }
+  </script>
+</head>
+<body>
+  ⏳ جاري توجيهك إلى التطبيق...
+</body>
+</html>
